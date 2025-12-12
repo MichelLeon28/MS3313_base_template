@@ -60,7 +60,16 @@ essential_packages <- c(
     "factoextra",  # Visualization of PCA outputs (scree plot, biplot)
     "pls",         # Partial Least Squares and Principal Component Regression
     "igraph",      # Network analysis and graph-based MDS visualization
-    "cluster"      # Clustering algorithms and MDS support
+    "cluster",     # Clustering algorithms and MDS support
+    
+    # Module 4: Factor Analysis and Conjoint Analysis
+    "corrplot",    # Correlation matrix visualization (ellipse, color plots)
+    "GPArotation", # Gradient Projection Algorithm for factor rotation
+    "nFactors",    # Determining number of factors (parallel analysis)
+    "conjoint",    # Conjoint analysis (part-worth utilities, importance)
+    "lavaan",      # Latent Variable Analysis - SEM, CFA, path analysis
+    "lavaanPlot",  # Visualization of SEM path diagrams
+    "DiagrammeR"   # Graph/diagram rendering for SEM plots
 )
 
 cat("Installing", length(essential_packages), "essential packages...\n")
