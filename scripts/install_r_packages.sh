@@ -28,7 +28,7 @@ essential_packages <- c(
     "httr", "jsonlite", "rvest", "curl",
     
     # Statistical and visualization
-    "broom", "scales", "plotly", "RColorBrewer",
+    "broom", "scales", "plotly", "RColorBrewer", "ggdendro", "GGally",
     
     # Data manipulation
     "reshape2", "data.table", "fastDummies",
@@ -116,6 +116,15 @@ if (requireNamespace("IRkernel", quietly = TRUE)) {
 }
 
 cat("🎉 R package installation complete!\n")
+
+# Install packages from GitHub (not available on CRAN)
+cat("\n📦 Installing packages from GitHub...\n")
+if (requireNamespace("devtools", quietly = TRUE)) {
+    devtools::install_github("gastonstat/DiscriMiner")
+    cat("✅ DiscriMiner installed from GitHub\n")
+} else {
+    cat("⚠️ devtools not available, skipping GitHub packages\n")
+}
 EOF
 
 echo "✅ R data science packages setup completed"
